@@ -1,0 +1,29 @@
+body {
+	background-color: blue;
+}
+
+#mainbody {
+	width: 500px;
+	height: 500px;
+}
+
+img {
+	float: left;
+	width: 30%;
+	height: 30%;
+}
+
+.lines_dem {
+	border-top: solid 3px gray;
+	border-bottom: solid 3px gray;
+}
+
+#next_line {
+	border-left: solid 3px gray;
+	border-right: solid 3px gray;
+}
+
+.butty {
+	margin-top: 20px;
+	
+}
