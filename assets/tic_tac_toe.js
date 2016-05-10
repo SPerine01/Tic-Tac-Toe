@@ -3,5 +3,5 @@ function startGame() {
 }
 
 function theMessages(msg) {
-	
+	document.getElementById("message").innerText = msg;
 }
