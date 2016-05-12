@@ -8,7 +8,7 @@ body {
 	margin: 100px auto;
 }
 
-.tic_tac_table, .box {
+.tic_tac_table, .boxy {
 	border: solid 3px gray;
 }
 
@@ -17,7 +17,7 @@ body {
 	width: 420px;
 }
 
-.box {
+.boxy {
 	text-align: center;
 	font-weight: bolder;
 	font-size: 10px;

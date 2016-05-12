@@ -28,13 +28,32 @@ function nextTurn() {
 	theMessages("It's " + document.turn + "'s turn now!");
 }
 
+// check every possible way a player can win
+function checkForTheWinner(move) {
+	var result = false;
+	if (checkRow(1, 2, 3, move) ||
+		checkRow(4, 5, 6, move) ||
+		checkRow(7, 8, 9, move) ||
+		checkRow(1, 4, 7, move) ||
+		checkRow(2, 5, 8, move) ||
+		checkRow(3, 6, 9, move) ||
+		checkRow(1, 5, 9, move) ||
+		checkRow(3, 5, 7, move)) {
+		result = true;
+	}
+	return result;
+}
+
 // to check each row for x/o option
 function checkRow(x, y, z, move) {
 	var result = false;
-if () {
-
-} else {
-
+	if (getBox(x) == move && getBox(y) == move && getBox(z) == move ) {
+		result = true;
+	}
+	return result;
 }
 
+// grabs box number
+function getBox (num) {
+	return document.getElementById("box" + num).innerText;
 }
