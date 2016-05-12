@@ -1,5 +1,7 @@
 function startGame() {
 	document.turn = "X";
+	document.winner = null;
+	theMessages(document.turn + " goes first");
 }
 
 // display message
@@ -9,7 +11,9 @@ function theMessages(msg) {
 
 // checks for the player's turn
 function nextMove(box) {
-	if (box.innerText == "") {
+	if (document.winner !== null) {
+		theMessages(document.winner + " won already. Don't be a sore loser.");
+	} else if (box.innerText == "") {
 		box.innerText = document.turn;
 		nextTurn();
 	} else {
@@ -21,6 +25,7 @@ function nextMove(box) {
 function nextTurn() {
 	if(checkForTheWinner(document.turn)) {
 		theMessages("Yay! Congrats, " + document.turn + "! You won!");
+		document.turn = document.winner;
 	} else if (document.turn == "X") {
 		document.turn = "O";
 		theMessages("It's " + document.turn + "'s turn now!");
