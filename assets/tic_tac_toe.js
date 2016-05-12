@@ -1,5 +1,8 @@
 function startGame() {
 	document.turn = "X";
+	if (Math.random() < 0.5) {
+		document.turn = "O";
+	}
 	document.winner = null;
 	theMessages(document.turn + " goes first");
 }
@@ -25,7 +28,7 @@ function nextMove(box) {
 function nextTurn() {
 	if(checkForTheWinner(document.turn)) {
 		theMessages("Yay! Congrats, " + document.turn + "! You won!");
-		document.turn = document.winner;
+		document.winner = document.turn;
 	} else if (document.turn == "X") {
 		document.turn = "O";
 		theMessages("It's " + document.turn + "'s turn now!");
