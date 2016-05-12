@@ -19,13 +19,15 @@ function nextMove(box) {
 
 // checks for the next player's turn after the initial move
 function nextTurn() {
-	if (document.turn == "X") {
+	if(checkForTheWinner(document.turn)) {
+		theMessages("Yay! Congrats, " + document.turn + "! You won!");
+	} else if (document.turn == "X") {
 		document.turn = "O";
+		theMessages("It's " + document.turn + "'s turn now!");
 	} else {
 		document.turn = "X";
+		theMessages("It's " + document.turn + "'s turn now!");
 	}
-
-	theMessages("It's " + document.turn + "'s turn now!");
 }
 
 // check every possible way a player can win
