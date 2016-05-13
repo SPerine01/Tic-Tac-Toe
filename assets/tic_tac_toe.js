@@ -1,4 +1,11 @@
 function startGame() {
+
+// loop through game box to refresh the board
+	for (var i = 1; i <= 9; i++) {
+		clearGameBox(i);
+	}
+
+// for random number so that either X or O can go first
 	document.turn = "X";
 	if (Math.random() < 0.5) {
 		document.turn = "O";
@@ -66,4 +73,8 @@ function checkRow(x, y, z, move) {
 // grabs box number
 function getBox (num) {
 	return document.getElementById("box" + num).innerText;
+}
+
+function clearGameBox (num) {
+	document.getElementById("box" + num).innerText = "";
 }

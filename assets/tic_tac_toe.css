@@ -10,20 +10,27 @@ body {
 
 .tic_tac_table, .boxy {
 	border: solid 3px gray;
+/*	position: absolute;*/
 }
 
 .tic_tac_table {
 	height: 380px;
 	width: 420px;
+	margin-bottom: 40px;
 }
 
 .boxy {
 	text-align: center;
 	font-weight: bolder;
 	font-size: 10px;
-
 }
 
 #message {
 
+}
+
+#butty {
+	border: 4px;
+	border-radius: 5px;
+	text-decoration: none;
 }
