@@ -1,5 +1,20 @@
-body {
-/*	background-color: blue;*/
+.the_game {
+	animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		background-color: #001f3f;
+	}
+	50% {
+		background-color: #ff4136;
+	}
+	75% {
+		background-color: #d1452c;
+	}
+	100% {
+		background-color: #43199e;
+	}
 }
 
 #mainbody {
@@ -25,8 +40,9 @@ body {
 	font-size: 10px;
 }
 
-#message {
-
+#message, #butty, .boxy {
+	font-family: 'Montserrat', sans-serif;
+	color: #d6cdde;
 }
 
 #butty {
