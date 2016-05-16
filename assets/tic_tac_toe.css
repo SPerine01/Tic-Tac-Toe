@@ -1,37 +1,50 @@
 .the_game {
-	animation: pulse 5s infinite;
+	background: linear-gradient(270deg, #cd5e24, #cd9224, #64cd24, #24c0cd, #2432cd, #6f24cd, #cd24ac, #cd245a);
+	background-size: 1600% 1600%;
+
+	-webkit-animation: AnimationName 30s ease infinite;
+	-moz-animation: AnimationName 30s ease infinite;
+	animation: AnimationName 30s ease infinite;
 }
 
-@keyframes pulse {
-	0% {
-		background-color: #001f3f;
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
 	}
-	50% {
-		background-color: #ff4136;
+	@-moz-keyframes AnimationName {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
 	}
-	75% {
-		background-color: #d1452c;
+	@keyframes AnimationName { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
 	}
-	100% {
-		background-color: #43199e;
-	}
-}
 
 #mainbody {
 	width: 500px;
 	height: 500px;
-	margin: 100px auto;
+	margin: 50px auto;
+}
+
+.title {
+	text-align: justify;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 52px;
 }
 
 .tic_tac_table, .boxy {
-	border: solid 3px gray;
-/*	position: absolute;*/
+	border: solid 3px #d6cdde;
+	table-layout: fixed;
 }
 
 .tic_tac_table {
 	height: 380px;
 	width: 420px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 .boxy {
@@ -40,9 +53,13 @@
 	font-size: 10px;
 }
 
-#message, #butty, .boxy {
+#message, #butty, .boxy, .title {
 	font-family: 'Montserrat', sans-serif;
 	color: #d6cdde;
+}
+
+#message {
+	float: left;
 }
 
 #butty {
